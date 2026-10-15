@@ -1,0 +1,23 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install test dependencies
+        # 测试使用模拟页面和本地 Excel 文件，不启动浏览器、不访问京东。
+        # DrissionPage 用于导入评论模块；其余依赖用于 Excel 往返和看板计算回归。
+        run: pip install pytest 'DrissionPage>=4.0,<5' pandas openpyxl jieba numpy scipy
+
+      - name: Run tests
+        run: pytest tests/ -v

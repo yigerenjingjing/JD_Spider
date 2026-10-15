@@ -1,0 +1,17 @@
+# 京东商品数据爬虫依赖
+# 安装：pip install -r requirements.txt
+
+# 浏览器自动化
+# DrissionPage 大版本间 API 差异大（本项目经历过 Chromium API 迁移），锁定下限避免装到不兼容版本
+DrissionPage>=4.0.0
+
+# 数据处理与 Excel
+pandas>=1.5
+openpyxl>=3.0
+
+# 数据分析与可视化（看板 / notebook）
+numpy>=1.22
+scipy>=1.8
+jieba>=0.42
+matplotlib>=3.5
+wordcloud>=1.8

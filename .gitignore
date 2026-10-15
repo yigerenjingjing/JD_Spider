@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# IDE / 编辑器
+.idea/
+.vscode/
+.claude/
+
+# 浏览器持久化登录数据（DrissionPage/Chrome 用户目录，体积大且含个人登录态）
+jd_user_data/
+
+# 测试与 Notebook 缓存
+.pytest_cache/
+.ipynb_checkpoints/
+
+# 爬取结果（体积大，且含大量采集数据，不入库）
+jd_result.xlsx
+*.xlsx
+
+# 看板是可由脚本重新生成的产物。本仓库只保留两份效果预览
+# （excel/dashboard.html、dashboard_mysql.html），其余忽略。
+dashboard.html
+dashboard_new.html
+!excel/dashboard.html
+
+# MySQL 方案含本地连接配置，不在本仓库内，避免误提交
+mysql/
+
+# macOS
+.DS_Store

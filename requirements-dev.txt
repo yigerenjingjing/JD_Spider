@@ -1,0 +1,7 @@
+# 开发/测试依赖
+# 安装：pip install -r requirements-dev.txt
+
+-r requirements.txt
+
+# 离线测试（纯函数与模拟页面，不启动浏览器或连接数据库）
+pytest>=7.0
